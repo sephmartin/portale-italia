@@ -14,6 +14,31 @@ Portale Italia non è un mockup: è un prototipo funzionante costruito per dimos
 - **Design accessibile e responsive** — funziona su desktop e mobile
 - **API Gateway unificato** per sviluppatori e agenti AI
 
+## 📸 Screenshot
+
+### Desktop
+
+| Hub | Dashboard |
+|-----|-----------|
+| ![Hub Desktop](assets/screenshots/desktop_hub.png) | ![Dashboard Desktop](assets/screenshots/desktop_dashboard.png) |
+
+| INPS | Agenzia Entrate |
+|------|-----------------|
+| ![INPS Desktop](assets/screenshots/desktop_inps.png) | ![Entrate Desktop](assets/screenshots/desktop_entrate.png) |
+
+### Mobile
+
+<p float="left">
+  <img src="assets/screenshots/mobile_hub.png" width="220" />
+  <img src="assets/screenshots/mobile_dashboard.png" width="220" />
+  <img src="assets/screenshots/mobile_inps.png" width="220" />
+</p>
+<p float="left">
+  <img src="assets/screenshots/mobile_entrate.png" width="220" />
+  <img src="assets/screenshots/mobile_pagopa.png" width="220" />
+  <img src="assets/screenshots/mobile_salute.png" width="220" />
+</p>
+
 ## 🏗 Architettura
 
 ```
