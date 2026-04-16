@@ -341,7 +341,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         <footer className="border-t py-4 px-6 mt-8" style={{ borderColor: "var(--color-border)" }}>
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <p className="text-xs" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
-              CittadinoOS · Portale Unificato PA
+              Seph Martin
             </p>
             <a href="https://github.com/sephmartin/portale-italia" target="_blank" rel="noopener noreferrer"
               className="text-xs flex items-center gap-1.5 hover:underline underline-offset-2"
