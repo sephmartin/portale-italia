@@ -16,16 +16,6 @@ Portale Italia non è un mockup: è un prototipo funzionante costruito per dimos
 
 ## 📸 Screenshot
 
-### Mobile
-
-| Hub | Dashboard | INPS |
-|-----|-----------|------|
-| ![Hub Mobile](assets/screenshots/mobile_hub.png) | ![Dashboard Mobile](assets/screenshots/mobile_dashboard.png) | ![INPS Mobile](assets/screenshots/mobile_inps.png) |
-
-| Agenzia Entrate | PagoPA | Salute |
-|-----------------|--------|--------|
-| ![Entrate Mobile](assets/screenshots/mobile_entrate.png) | ![PagoPA Mobile](assets/screenshots/mobile_pagopa.png) | ![Salute Mobile](assets/screenshots/mobile_salute.png) |
-
 ### Desktop
 
 | Hub | Dashboard |
@@ -35,6 +25,16 @@ Portale Italia non è un mockup: è un prototipo funzionante costruito per dimos
 | INPS | Agenzia Entrate |
 |------|-----------------|
 | ![INPS Desktop](assets/screenshots/desktop_inps.png) | ![Entrate Desktop](assets/screenshots/desktop_entrate.png) |
+
+### Mobile
+
+| Hub | Dashboard | INPS |
+|-----|-----------|------|
+| ![Hub Mobile](assets/screenshots/mobile_hub.png) | ![Dashboard Mobile](assets/screenshots/mobile_dashboard.png) | ![INPS Mobile](assets/screenshots/mobile_inps.png) |
+
+| Agenzia Entrate | PagoPA | Salute |
+|-----------------|--------|--------|
+| ![Entrate Mobile](assets/screenshots/mobile_entrate.png) | ![PagoPA Mobile](assets/screenshots/mobile_pagopa.png) | ![Salute Mobile](assets/screenshots/mobile_salute.png) |
 
 ## 🏗 Architettura
 
