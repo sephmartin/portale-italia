@@ -4,3 +4,7 @@ dist/
 .env
 .env.local
 .DS_Store
+*.mp4
+record_demo*.py
+capture_screenshots.py
+deploy_*.py
