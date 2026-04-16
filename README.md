@@ -28,13 +28,16 @@ Portale Italia non è un mockup: è un prototipo funzionante costruito per dimos
 
 ### Mobile
 
-| Hub | Dashboard | INPS |
-|-----|-----------|------|
-| ![Hub Mobile](assets/screenshots/mobile_hub.png) | ![Dashboard Mobile](assets/screenshots/mobile_dashboard.png) | ![INPS Mobile](assets/screenshots/mobile_inps.png) |
-
-| Agenzia Entrate | PagoPA | Salute |
-|-----------------|--------|--------|
-| ![Entrate Mobile](assets/screenshots/mobile_entrate.png) | ![PagoPA Mobile](assets/screenshots/mobile_pagopa.png) | ![Salute Mobile](assets/screenshots/mobile_salute.png) |
+<p float="left">
+  <img src="assets/screenshots/mobile_hub.png" width="220" />
+  <img src="assets/screenshots/mobile_dashboard.png" width="220" />
+  <img src="assets/screenshots/mobile_inps.png" width="220" />
+</p>
+<p float="left">
+  <img src="assets/screenshots/mobile_entrate.png" width="220" />
+  <img src="assets/screenshots/mobile_pagopa.png" width="220" />
+  <img src="assets/screenshots/mobile_salute.png" width="220" />
+</p>
 
 ## 🏗 Architettura
 
