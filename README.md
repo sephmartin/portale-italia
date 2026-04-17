@@ -80,7 +80,7 @@ shared/             # Schema condiviso
 
 Contributi benvenuti. Il progetto è pensato per essere un prototipo educativo e di advocacy — una dimostrazione di cosa i cittadini italiani meritano.
 
-Apri una issue o una PR. Per proposte di collaborazione istituzionale o commerciale: **sephmartinmusic@gmail.com**
+Apri una issue o una PR. Per proposte di collaborazione istituzionale o commerciale: **portale@sephmartin.com**
 
 ## ⚖️ Licenza
 
