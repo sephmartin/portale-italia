@@ -334,11 +334,11 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       />
       <Topbar sidebarWidth={sidebarWidth} onMobileMenu={() => setMobileOpen(o => !o)} isMobile={isMobile} />
       <main
-        className="min-h-dvh pt-16 flex flex-col transition-all duration-300"
+        className="min-h-dvh pt-16 transition-all duration-300"
         style={{ paddingLeft: sidebarWidth, background: "var(--color-bg)" }}
       >
-        <div className="p-6 max-w-7xl mx-auto w-full flex-1">{children}</div>
-        <footer className="border-t py-4 px-6 mt-auto" style={{ borderColor: "var(--color-border)" }}>
+        <div className="p-6 max-w-7xl mx-auto">{children}</div>
+        <footer className="border-t py-4 px-6 mt-8" style={{ borderColor: "var(--color-border)" }}>
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
             <p className="text-xs" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
               Seph Martin
