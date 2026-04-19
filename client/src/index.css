@@ -131,6 +131,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    background-color: var(--color-bg);
   }
   body {
     min-height: 100dvh;
