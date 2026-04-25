@@ -14,6 +14,14 @@ Portale Italia non è un mockup: è un prototipo funzionante costruito per dimos
 - **Design accessibile e responsive** — funziona su desktop e mobile
 - **API Gateway unificato** per sviluppatori e agenti AI
 
+## 🌐 Benchmark Internazionali
+
+Il pattern architetturale di Portale-Italia segue la direzione già tracciata da tre modelli di riferimento globali. Questo PoC esplora la fattibilità di quel modello nel contesto italiano, dimostrando che il gap non è tecnologico — è di volontà e design.
+
+- **🇪🇪 Estonia — Bürokratt:** Assistente AI unificato (dal 2020) che aggrega servizi pubblici eterogenei in un'interfaccia conversazionale accessibile via testo, voce o lingua dei segni. Pattern "generative UI over legacy systems." [→ e-estonia](https://e-estonia.com/estonia-and-automated-decision-making-challenges-for-public-administration/)
+- **🇬🇧 UK — AI Opportunities Action Plan 2025:** Governo britannico con partnership Anthropic per costruire un AI assistant per i servizi pubblici. "Humphrey" per i civil servant. Risparmio stimato: £45 miliardi/anno. [→ techUK](https://www.techuk.org/resource/uk-government-brings-further-ai-capability-into-public-services.html)
+- **🇸🇬 Singapore — Singpass:** 2.700 servizi di 800 enti accessibili da una singola identità digitale unificata. 41 milioni di transazioni al mese. Il modello più maturo di "single entry point" per i servizi PA. [→ tech.gov.sg](https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/)
+
 ## 📸 Screenshot
 
 ### Desktop
