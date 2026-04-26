@@ -1,0 +1,310 @@
+openapi: 3.0.3
+info:
+  title: CittadinoOS API Gateway
+  description: >-
+    API Gateway per il portale dei servizi pubblici digitali CittadinoOS. 
+    Consente l'accesso aggregato a servizi INPS, Agenzia delle Entrate, PagoPA, ANPR, Fascicolo Sanitario e Portale Automobilista.
+    L'accesso a tutte le risorse richiede l'autenticazione tramite SPID o CIE.
+  version: 1.0.0
+servers:
+  - url: https://portale-italia.online/api/v1
+    description: Production server
+
+tags:
+  - name: Agent
+    description: Servizi di assistenza virtuale basati su IA
+  - name: Services
+    description: Catalogo dei servizi della Pubblica Amministrazione
+  - name: Notifications
+    description: Gestione delle notifiche aggregate per il cittadino
+  - name: Citizen
+    description: Gestione del profilo e dati anagrafici del cittadino
+
+paths:
+  /agent/query:
+    post:
+      tags:
+        - Agent
+      summary: Esegue una query all'assistente virtuale
+      operationId: queryAgent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AgentQuery'
+      responses:
+        '200':
+          description: Risposta dell'assistente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentResponse'
+        '400':
+          description: Richiesta non valida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /agent/history/{sessionId}:
+    get:
+      tags:
+        - Agent
+      summary: Recupera la cronologia dei messaggi per sessione
+      operationId: getAgentHistory
+      parameters:
+        - name: sessionId
+          in: path
+          required: true
+          description: ID univoco della sessione di chat
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista dei messaggi della sessione
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ChatMessage'
+        '404':
+          description: Sessione non trovata
+
+  /services:
+    get:
+      tags:
+        - Services
+      summary: Recupera il catalogo dei moduli di servizio PA
+      operationId: getServices
+      responses:
+        '200':
+          description: Lista dei moduli e relativi servizi
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modules:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ServiceModule'
+
+  /notifications:
+    get:
+      tags:
+        - Notifications
+      summary: Recupera le notifiche aggregate per il cittadino
+      operationId: getNotifications
+      responses:
+        '200':
+          description: Lista delle notifiche
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  notifications:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Notification'
+
+  /citizen/profile:
+    get:
+      tags:
+        - Citizen
+      summary: Recupera il profilo aggregato del cittadino
+      operationId: getCitizenProfile
+      responses:
+        '200':
+          description: Profilo cittadino con stato autenticazione e riepilogo servizi
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CitizenProfile'
+
+components:
+  schemas:
+    AgentQuery:
+      type: object
+      required:
+        - message
+        - sessionId
+      properties:
+        message:
+          type: string
+          example: "Come posso richiedere la NASpI?"
+        sessionId:
+          type: string
+          example: "sess_123456789"
+        module:
+          type: string
+          example: "inps"
+          description: Modulo specifico per restringere il contesto della ricerca
+
+    AgentResponse:
+      type: object
+      properties:
+        response:
+          type: string
+          example: "La NASpI spetta ai lavoratori dipendenti disoccupati involontari..."
+        action:
+          $ref: '#/components/schemas/Action'
+        module:
+          type: string
+          example: "inps"
+        messageId:
+          type: string
+          example: "msg_abc123"
+
+    Action:
+      type: object
+      nullable: true
+      properties:
+        label:
+          type: string
+          example: "Vai a INPS → NASpI"
+        url:
+          type: string
+          example: "#/inps/naspi"
+
+    ChatMessage:
+      type: object
+      properties:
+        id:
+          type: string
+        sessionId:
+          type: string
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+        module:
+          type: string
+        timestamp:
+          type: integer
+          format: int64
+
+    ServiceModule:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "inps"
+        name:
+          type: string
+          example: "INPS"
+        color:
+          type: string
+          example: "#1a3a6b"
+        icon:
+          type: string
+          example: "shield"
+        services:
+          type: array
+          items:
+            type: string
+          example: ["Pensione", "NASpI", "ISEE"]
+
+    Notification:
+      type: object
+      properties:
+        id:
+          type: integer
+        module:
+          type: string
+          example: "entrate"
+        title:
+          type: string
+          example: "730 Precompilato disponibile"
+        body:
+          type: string
+          example: "Il tuo 730/2026 è pronto per la revisione."
+        date:
+          type: string
+          format: date
+          example: "2026-04-10"
+        priority:
+          type: string
+          enum: [high, medium, low]
+        read:
+          type: boolean
+
+    CitizenProfile:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Mario Rossi"
+        cf:
+          type: string
+          example: "RSSMRA80A01H501U"
+        spid:
+          type: boolean
+          description: Indica se l'utente è autenticato via SPID
+        cie:
+          type: boolean
+          description: Indica se l'utente è autenticato via CIE
+        summary:
+          type: object
+          properties:
+            inps:
+              type: object
+              properties:
+                contributions: { type: integer }
+                nextPayment: { type: string, nullable: true }
+                activeDomande: { type: integer }
+            entrate:
+              type: object
+              properties:
+                pending730: { type: boolean }
+                lastF24: { type: string, format: date }
+                pendingRimborso: { type: number }
+            pagopa:
+              type: object
+              properties:
+                pendingPayments: { type: integer }
+                totalPending: { type: number }
+            anpr:
+              type: object
+              properties:
+                residence: { type: string }
+                lastCertificate: { type: string, format: date }
+            salute:
+              type: object
+              properties:
+                unresolvedReferti: { type: integer }
+                activeEsenzioni: { type: array, items: { type: string } }
+            auto:
+              type: object
+              properties:
+                vehicles: { type: integer }
+                bolloExpiry: { type: string, format: date }
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "message and sessionId required"
+
+security:
+  - spidCieAuth: []
+
+components:
+  securitySchemes:
+    spidCieAuth:
+      type: oauth2
+      description: Autenticazione tramite SPID o CIE (Standard AGID)
+      flows:
+        authorizationCode:
+          authorizationUrl: https://id.spid.gov.it/authorize
+          tokenUrl: https://id.spid.gov.it/token
+          scopes:
+            openid: OpenID Connect
+            profile: Accesso ai dati del profilo
