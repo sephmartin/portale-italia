@@ -267,7 +267,8 @@ function Topbar({ sidebarWidth, onMobileMenu, isMobile }: { sidebarWidth: number
         {/* Notifications badge */}
         <Link href="/dashboard"
           className="relative w-9 h-9 rounded-lg flex items-center justify-center hover:bg-[var(--color-border)] transition-colors"
-          style={{ color: "var(--color-text-muted)" }} aria-label="Notifiche"
+          style={{ color: "var(--color-text-muted)" }}
+          aria-label="Notifiche — vai alla dashboard"
         >
           <BellIcon size={18} />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full" style={{ background: "#ef4444" }} />

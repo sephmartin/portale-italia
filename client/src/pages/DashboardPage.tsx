@@ -32,10 +32,10 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8 fade-in">
       <div>
-        <h1 className="font-extrabold" style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", color: "var(--color-text)" }}>
+          <h1 className="font-extrabold" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.75rem, 1.2rem + 2.5vw, 2.5rem)", color: "var(--color-text)" }}>
           Dashboard
         </h1>
-        <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>
+        <p className="text-base mt-1" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>
           Situazione aggiornata al {new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" })}
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function DashboardPage() {
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Left: notifications */}
         <div className="lg:col-span-2 space-y-4">
-          <h2 className="font-bold" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>
+          <h2 className="font-bold text-base" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>
             Notifiche ({notifications.filter((n: any) => !n.read).length} non lette)
           </h2>
           <div className="space-y-2">
@@ -64,15 +64,15 @@ export default function DashboardPage() {
                   )}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-0.5">
-                      <p className="font-semibold text-sm" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{n.title}</p>
+                      <p className="font-semibold text-base" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{n.title}</p>
                       <NotifBadge priority={n.priority} />
                     </div>
-                    <p className="text-xs" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{n.message || n.body}</p>
+                    <p className="text-sm" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{n.message || n.body}</p>
                     <div className="flex items-center gap-2 mt-1.5">
-                      <span className="text-xs" style={{ color: "var(--color-text-faint)" }}>
+                      <span className="text-sm" style={{ color: "var(--color-text-faint)" }}>
                         {new Date(n.date).toLocaleDateString("it-IT", { day: "numeric", month: "short" })}
                       </span>
-                      {mod && <span className="text-xs font-medium" style={{ color: MODULE_COLOR[moduleId] }}>{mod.label}</span>}
+                      {mod && <span className="text-sm font-semibold" style={{ color: MODULE_COLOR[moduleId] }}>{mod.label}</span>}
                     </div>
                   </div>
                 </div>
@@ -92,8 +92,8 @@ export default function DashboardPage() {
                   {citizen.name?.split(" ")?.map((n: string) => n[0])?.join("") ?? ""}
                 </div>
                 <div>
-                  <p className="font-bold text-sm" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{citizen.name}</p>
-                  <p className="text-xs" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-mono)" }}>{citizen.cf}</p>
+                  <p className="font-bold text-base" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{citizen.name}</p>
+                  <p className="text-sm" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-mono)" }}>{citizen.cf}</p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -102,7 +102,7 @@ export default function DashboardPage() {
                   { label: "CIE", ok: cieStatus?.active, color: "var(--color-brand)" },
                 ].map(i => (
                   <div key={i.label} className="flex items-center justify-between">
-                    <span className="text-xs" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{i.label}</span>
+                    <span className="text-sm" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{i.label}</span>
                     <div className="flex items-center gap-1.5">
                       <div className="w-1.5 h-1.5 rounded-full" style={{ background: i.ok ? "#22c55e" : "#ef4444" }} />
                       <span className="text-xs font-medium" style={{ color: i.ok ? "#22c55e" : "#ef4444", fontFamily: "var(--font-body)" }}>
@@ -133,9 +133,9 @@ export default function DashboardPage() {
                     <Icon size={15} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs font-semibold" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{label}</p>
+                    <p className="text-sm font-semibold" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{label}</p>
                     {lines.map((l, i) => (
-                      <p key={i} className="text-xs truncate" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{l}</p>
+                      <p key={i} className="text-sm truncate" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{l}</p>
                     ))}
                   </div>
                 </div>
