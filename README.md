@@ -2,6 +2,8 @@
 
 > **Il layer di orchestrazione che unifica i servizi della PA italiana in un'unica interfaccia conversazionale.**
 
+> ⚠️ **PoC educativo e di advocacy.** I dati sono simulati. Non integra sistemi PA reali. Nessun dato personale viene raccolto o trasmesso.
+
 Portale Italia non è un mockup: è un prototipo funzionante costruito per dimostrare che il collo di bottiglia della burocrazia digitale italiana non è più tecnologico, ma di design.
 
 🔗 **Live Demo:** [portale-italia.online](https://portale-italia.online)
