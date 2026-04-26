@@ -113,7 +113,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
     >
       {/* Logo area */}
       <div className="h-16 flex items-center px-4 border-b flex-shrink-0" style={{ borderColor: "var(--color-border)" }}>
-        <Link href="/" className="flex-1 min-w-0">
+        <Link href="/" className="flex-1 min-w-0" aria-label="Home">
           <Logo collapsed={collapsed} />
         </Link>
         {!collapsed && (
@@ -135,7 +135,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
         {topNav.map(({ href, label, Icon }) => {
           const active = location === href;
           return (
-            <Link key={href} href={href}
+            <Link key={href} href={href} aria-label={label}
               className={`relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${active ? "nav-active" : ""}`}
               style={{
                 background: active ? "var(--color-brand-light)" : "transparent",
@@ -144,7 +144,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
               }}
               data-testid={`nav-${label.toLowerCase()}`}
             >
-              <Icon size={16} />
+              <Icon size={16} aria-hidden=\"true\" />
               {!collapsed && <span>{label}</span>}
             </Link>
           );
@@ -161,7 +161,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
         {MODULES.map(({ id, href, label, color, bg, icon: Icon }) => {
           const active = location.startsWith(href);
           return (
-            <Link key={id} href={href}
+            <Link key={id} href={href} aria-label={label}
               className={`relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${active ? "nav-active" : ""}`}
               style={{
                 background: active ? bg : "transparent",
@@ -171,7 +171,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
               title={collapsed ? label : undefined}
               data-testid={`nav-module-${id}`}
             >
-              <span style={{ color: active ? color : "var(--color-text-faint)" }}><Icon size={16} /></span>
+              <span style={{ color: active ? color : "var(--color-text-faint)" }}><Icon size={16} aria-hidden="true" /></span>
               {!collapsed && <span>{label}</span>}
             </Link>
           );
@@ -180,7 +180,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
         {!collapsed && <div className="mx-1 my-2 h-px" style={{ background: "var(--color-divider)" }} />}
         {collapsed && <div className="my-2 mx-2 h-px" style={{ background: "var(--color-divider)" }} />}
 
-        <Link href="/api"
+        <Link href="/api" aria-label="API Gateway"
           className={`relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${location === "/api" ? "nav-active" : ""}`}
           style={{
             background: location === "/api" ? "var(--color-brand-light)" : "transparent",
@@ -189,7 +189,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
           }}
           title={collapsed ? "API Gateway" : undefined}
         >
-          <CodeIcon size={16} />
+          <CodeIcon size={16} aria-hidden=\"true\" />
           {!collapsed && <span>API Gateway</span>}
         </Link>
       </nav>
@@ -267,7 +267,7 @@ function Topbar({ sidebarWidth, onMobileMenu, isMobile }: { sidebarWidth: number
         {/* Notifications badge */}
         <Link href="/dashboard"
           className="relative w-9 h-9 rounded-lg flex items-center justify-center hover:bg-[var(--color-border)] transition-colors"
-          style={{ color: "var(--color-text-muted)" }}
+          style={{ color: "var(--color-text-muted)" }} aria-label="Notifiche"
         >
           <BellIcon size={18} />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full" style={{ background: "#ef4444" }} />

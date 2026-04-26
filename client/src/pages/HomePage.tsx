@@ -69,17 +69,17 @@ export default function HomePage() {
 
       {/* Agent — central */}
       <div>
-        <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
+        <h2 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
           Assistente Unificato
-        </p>
+        </h2>
         <AgentWidget module="general" accent="var(--color-brand)" />
       </div>
 
       {/* Quick status cards */}
       <div>
-        <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
+        <h2 className=\"text-xs font-semibold uppercase tracking-widest mb-3\" style={{ color: \"var(--color-text-faint)\", fontFamily: \"var(--font-body)\" }}>
           La tua situazione
-        </p>
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 stagger">
           {[
             { label: "730 precompilato", value: "Disponibile", hint: "Scadenza 30 set", color: "var(--color-entrate)", bg: "var(--color-entrate-light)", urgent: true, href: "/entrate" },
@@ -109,9 +109,9 @@ export default function HomePage() {
 
       {/* Modules grid */}
       <div>
-        <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
+        <h2 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
           Accesso diretto ai servizi
-        </p>
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 stagger">
           {MODULES.map(({ id, href, label, color, bg, icon: Icon }) => (
             <Link key={id} href={href}
@@ -148,7 +148,7 @@ export default function HomePage() {
             </svg>
             <span className="text-xs font-semibold uppercase tracking-wide opacity-50" style={{ fontFamily: "var(--font-body)" }}>Developer & AI Agents</span>
           </div>
-          <h3 className="font-extrabold" style={{ fontFamily: "var(--font-display)" }}>API Gateway Unificato</h3>
+          <h2 className="font-extrabold" style={{ fontFamily: "var(--font-display)" }}>API Gateway Unificato</h2>
           <p className="text-sm mt-1 opacity-60" style={{ fontFamily: "var(--font-body)" }}>
             Tutti i servizi PA in un unico endpoint. Integra in n8n, Make, o qualsiasi agente AI.
           </p>

@@ -84,6 +84,20 @@ server/             # Backend Express (opzionale)
 shared/             # Schema condiviso
 ```
 
+## 🤝 API Gateway
+
+CittadinoOS espone un API Gateway REST unificato con contratto documentato **OpenAPI 3.0** e standard AGID. Tutte le risorse richiedono autenticazione SPID/CIE.
+
+- 📄 **Spec:** [OpenAPI.yaml](./OpenAPI.yaml)
+- 🔗 **Sandbox:** `https://portale-italia.online/api/v1`
+
+<table>
+<tr><td><code>POST /api/v1/agent/query</code></td><td>Query assistente AI</td></tr>
+<tr><td><code>GET /api/v1/services</code></td><td>Catalogo servizi PA</td></tr>
+<tr><td><code>GET /api/v1/notifications</code></td><td>Notifiche aggregate</td></tr>
+<tr><td><code>GET /api/v1/citizen/profile</code></td><td>Profilo cittadino</td></tr>
+</table>
+
 ## 🤝 Contribuire
 
 Contributi benvenuti. Il progetto è pensato per essere un prototipo educativo e di advocacy — una dimostrazione di cosa i cittadini italiani meritano.

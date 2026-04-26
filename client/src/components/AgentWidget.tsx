@@ -168,7 +168,7 @@ export default function AgentWidget({ module = "general", accent = "var(--color-
               }>
               <p style={{ fontFamily: "var(--font-body)", lineHeight: 1.55 }}>{m.content}</p>
               {m.action && (
-                <a href={m.action.url} className="mt-1.5 flex items-center gap-1 text-xs font-semibold hover:underline underline-offset-2"
+                <a href={m.action.url} className="mt-1.5 flex items-center gap-1 text-xs font-semibold hover:underline underline-offset-2" aria-label={m.action.label}
                   style={{ color: m.role === "user" ? "rgba(255,255,255,0.8)" : accent }}>
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   {m.action.label}

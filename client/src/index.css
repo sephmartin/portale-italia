@@ -88,7 +88,7 @@
     --secondary: 222 15% 16%;
     --secondary-foreground: 220 10% 75%;
     --muted: 222 15% 14%;
-    --muted-foreground: 220 10% 52%;
+    --muted-foreground: 220 10% 60%;
     --accent: 142 45% 48%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 65% 55%;
@@ -104,7 +104,7 @@
     --color-divider: #1a2230;
     --color-text: #e4e9f0;
     --color-text-muted: #7a8898;
-    --color-text-faint: #3e4e5e;
+    --color-text-faint: #6a7a8a;
     --color-brand: #3daa66;
     --color-brand-hover: #5cc07c;
     --color-brand-light: #0d2218;

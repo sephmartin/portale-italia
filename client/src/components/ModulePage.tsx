@@ -90,7 +90,7 @@ export default function ModulePage({ id, name, tagline, color, colorHex, darkHex
         <div className="grid sm:grid-cols-2 gap-4">
           {infoCards.map(card => (
             <div key={card.title} className="p-5 rounded-xl border" style={{ background: "var(--color-surface)", borderColor: "var(--color-border)" }}>
-              <h3 className="font-bold text-sm mb-3" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{card.title}</h3>
+              <h2 className="font-bold text-sm mb-3" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{card.title}</h2>
               <ul className="space-y-1.5">
                 {card.items.map(item => (
                   <li key={item} className="flex items-start gap-2 text-xs" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>
