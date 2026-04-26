@@ -144,7 +144,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
               }}
               data-testid={`nav-${label.toLowerCase()}`}
             >
-              <Icon size={16} aria-hidden=\"true\" />
+              <Icon size={16} aria-hidden="true" />
               {!collapsed && <span>{label}</span>}
             </Link>
           );
@@ -189,7 +189,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
           }}
           title={collapsed ? "API Gateway" : undefined}
         >
-          <CodeIcon size={16} aria-hidden=\"true\" />
+          <CodeIcon size={16} aria-hidden="true" />
           {!collapsed && <span>API Gateway</span>}
         </Link>
       </nav>
@@ -270,7 +270,8 @@ function Topbar({ sidebarWidth, onMobileMenu, isMobile }: { sidebarWidth: number
           style={{ color: "var(--color-text-muted)" }}
           aria-label="Notifiche — vai alla dashboard"
         >
-          <BellIcon size={18} />
+          <span className="sr-only">Notifiche</span>
+          <BellIcon size={18} aria-hidden="true" />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full" style={{ background: "#ef4444" }} />
         </Link>
         {/* SPID badge */}

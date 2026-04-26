@@ -103,12 +103,8 @@
     --color-border: #1e2730;
     --color-divider: #1a2230;
     --color-text: #e4e9f0;
-<<<<<<< HEAD
-    --color-text-muted: #7a8898;
-=======
-    --color-text-muted: #8a98a8;
->>>>>>> a4c6420 (fix: accessibility + font size improvements)
-    --color-text-faint: #6a7a8a;
+    --color-text-muted: #6a7a8a;
+    --color-text-faint: #5a6a7a;
     --color-brand: #3daa66;
     --color-brand-hover: #5cc07c;
     --color-brand-light: #0d2218;

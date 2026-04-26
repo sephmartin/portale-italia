@@ -77,7 +77,7 @@ export default function HomePage() {
 
       {/* Quick status cards */}
       <div>
-        <h2 className=\"text-xs font-semibold uppercase tracking-widest mb-3\" style={{ color: \"var(--color-text-faint)\", fontFamily: \"var(--font-body)\" }}>
+        <h2 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--color-text-faint)", fontFamily: "var(--font-body)" }}>
           La tua situazione
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 stagger">
