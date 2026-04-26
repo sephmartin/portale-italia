@@ -44,6 +44,14 @@ Il pattern architetturale di Portale-Italia segue la direzione già tracciata da
 |-----------------|--------|--------|
 | <img src="assets/screenshots/mobile_entrate.png" width="200" /> | <img src="assets/screenshots/mobile_pagopa.png" width="200" /> | <img src="assets/screenshots/mobile_salute.png" width="200" /> |
 
+## 🎨 Design System
+
+Portale-Italia uses the official [`design-tokens-italia`](https://github.com/teamdigitale/design-tokens-italia) token set to ensure full compliance with AgID design guidelines. The custom brand colors (verde Italia) are layered on top of the official tokens for spacing, typography, radii, and shadows — giving you institutional credibility with a unique identity.
+
+- **Tokens:** spacing (`--it-spacing-*`), font sizes (`--it-font-size-*`), shadows, radius
+- **Custom:** `--color-brand` (#1d7a3f), module-specific colors, dark theme extensions
+- **Result:** WCAG AA accessible, AGID-aligned, Lighthouse 91+ mobile
+
 ## 🏗 Architettura
 
 ```
