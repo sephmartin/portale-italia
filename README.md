@@ -48,11 +48,11 @@ Il pattern architetturale di Portale-Italia segue la direzione già tracciata da
 
 ## 🎨 Design System
 
-Portale-Italia uses the official [`design-tokens-italia`](https://github.com/teamdigitale/design-tokens-italia) token set to ensure full compliance with AgID design guidelines. The custom brand colors (verde Italia) are layered on top of the official tokens for spacing, typography, radii, and shadows — giving you institutional credibility with a unique identity.
+Portale-Italia utilizza il token set ufficiale [`design-tokens-italia`](https://github.com/italia/design-tokens-italia) per garantire la piena conformità alle linee guida di design AgID. I colori del brand personalizzato (verde Italia) si sovrappongono ai token ufficiali per spaziatura, tipografia, raggi e ombre — offrendo credibilità istituzionale con un'identità distintiva.
 
-- **Tokens:** spacing (`--it-spacing-*`), font sizes (`--it-font-size-*`), shadows, radius
-- **Custom:** `--color-brand` (#1d7a3f), module-specific colors, dark theme extensions
-- **Result:** WCAG AA accessible, AGID-aligned, Lighthouse 91+ mobile
+- **Token:** spaziatura (`--it-spacing-*`), dimensioni font (`--it-font-size-*`), ombre, raggi
+- **Personalizzati:** `--color-brand` (#1d7a3f), colori specifici per modulo, estensioni tema scuro
+- **Risultato:** accessibile WCAG AA, allineato AGID, Lighthouse 91+ mobile
 
 ## 🏗 Architettura
 
@@ -86,7 +86,7 @@ npm run build    # Build produzione
 ```
 client/src/
 ├── pages/          # Pagine (Dashboard, INPS, Entrate, PagoPA, ...)
-├── components/     # AppShell, AgentWidget, UI components
+├── components/     # AppShell, AgentWidget, componenti UI
 ├── hooks/          # use-toast, use-mobile
 └── lib/            # Utils, queryClient
 
@@ -96,7 +96,7 @@ shared/             # Schema condiviso
 
 ## 🤝 API Gateway
 
-CittadinoOS espone un API Gateway REST unificato con contratto documentato **OpenAPI 3.0** e standard AGID. Tutte le risorse richiedono autenticazione SPID/CIE.
+Portale Italia espone un API Gateway REST unificato con contratto documentato **OpenAPI 3.0** e standard AGID. Tutte le risorse richiedono autenticazione SPID/CIE.
 
 - 📄 **Spec:** [OpenAPI.yaml](./OpenAPI.yaml)
 - 🔗 **Sandbox:** `https://portale-italia.online/api/v1`
@@ -110,7 +110,7 @@ CittadinoOS espone un API Gateway REST unificato con contratto documentato **Ope
 
 ## 🤝 Contribuire
 
-Contributi benvenuti. Il progetto è pensato per essere un prototipo educativo e di advocacy — una dimostrazione di cosa i cittadini italiani meritano.
+Contributi benvenuti. Il progetto è pensato come prototipo educativo e di advocacy — una dimostrazione di cosa i cittadini italiani meritano.
 
 Apri una issue o una PR. Per proposte di collaborazione istituzionale o commerciale: **portale@sephmartin.com**
 
