@@ -1,0 +1,128 @@
+publiccodeYmlVersion: "0.3"
+
+name: Portale Italia
+url: "https://github.com/sephmartin/portale-italia"
+softwareVersion: "0.1.0"
+releaseDate: "2026-04-27"
+logo: assets/logo.svg
+
+platforms:
+  - web
+
+categories:
+  - it-security
+  - collaboration
+  - content-management
+
+usedBy:
+  - N/A (PoC)
+
+roadmap: "https://github.com/sephmartin/portale-italia/issues"
+
+developmentStatus: concept
+
+softwareType: standalone/web
+
+intendedAudience:
+  scope:
+    - government
+    - society
+  countries:
+    - it
+
+description:
+  it:
+    localisedName: Portale Italia
+    shortDescription: >
+      Layer di orchestrazione open source che unifica i servizi della PA italiana
+      (INPS, Agenzia Entrate, PagoPA, ANPR, Fascicolo Sanitario) in un'unica
+      interfaccia accessibile tramite SPID/CIE.
+    longDescription: >
+      Portale Italia è un proof-of-concept funzionante che dimostra come sia
+      tecnicamente possibile — oggi, con tecnologie esistenti — offrire al
+      cittadino italiano un unico punto di accesso a tutti i servizi PA.
+
+      Il collo di bottiglia della burocrazia digitale italiana non è tecnologico:
+      le informazioni esistono, le API esistono, l'identità digitale esiste.
+      Il problema è di design: nessuno ha mai progettato l'esperienza complessiva
+      del cittadino attraverso i vari enti.
+
+      Questo progetto si propone come layer intelligente sopra i sistemi legacy
+      esistenti — non li sostituisce, li orchestra. Il modello architetturale
+      segue i pattern già adottati da Estonia (Bürokratt), UK (AI Opportunities
+      Action Plan) e Singapore (Singpass).
+
+      Il prototipo include:
+      - Dashboard unificata con notifiche aggregate da INPS, Agenzia Entrate,
+        PagoPA, ANPR, Fascicolo Sanitario, Portale Automobilista
+      - Agente AI conversazionale per navigare i servizi PA in linguaggio naturale
+      - API Gateway unificato documentato con OpenAPI 3.0
+      - Design system conforme alle linee guida AGID (design-tokens-italia)
+      - Autenticazione SPID/CIE (stub, da integrare con Identity Provider ufficiali)
+
+      I dati sono attualmente simulati. Il progetto è aperto a collaborazione
+      istituzionale per l'integrazione con le API reali degli enti PA.
+
+    documentation: "https://github.com/sephmartin/portale-italia/blob/main/README.md"
+    apiDocumentation: "https://github.com/sephmartin/portale-italia/blob/main/OpenAPI.yaml"
+    features:
+      - Hub unificato per tutti i servizi PA italiani
+      - Assistente AI conversazionale cross-piattaforma
+      - API Gateway REST con spec OpenAPI 3.0
+      - Design accessibile WCAG AA conforme AGID
+      - Dark mode nativa e responsive mobile
+
+  en:
+    localisedName: Portale Italia
+    shortDescription: >
+      Open source orchestration layer that unifies Italian public administration
+      services (INPS, Revenue Agency, PagoPA, ANPR, Health Records) into a single
+      interface accessible via SPID/CIE digital identity.
+    longDescription: >
+      Portale Italia is a working proof-of-concept demonstrating that it is
+      technically possible — today, with existing technologies — to give Italian
+      citizens a single access point to all public administration services.
+
+      The bottleneck of Italian digital bureaucracy is not technological: the
+      data exists, the APIs exist, digital identity exists. The problem is one
+      of design: no one has ever designed the citizen's end-to-end experience
+      across agencies.
+
+      This project acts as an intelligent layer on top of existing legacy systems
+      — it does not replace them, it orchestrates them. The architectural pattern
+      follows models already adopted by Estonia (Bürokratt), UK (AI Opportunities
+      Action Plan) and Singapore (Singpass).
+
+    features:
+      - Unified hub for all Italian PA services
+      - Conversational AI assistant across platforms
+      - REST API Gateway with OpenAPI 3.0 spec
+      - WCAG AA accessible design compliant with AGID guidelines
+      - Native dark mode and mobile responsive
+
+legal:
+  license: AGPL-3.0-only
+  mainCopyrightOwner: Seph Martin
+  repoOwner: Seph Martin
+
+maintenance:
+  type: internal
+  contacts:
+    - name: Seph Martin
+      email: portale@sephmartin.com
+      affiliation: Independent
+
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - it
+    - en
+
+dependsOn:
+  open:
+    - name: React
+      versionMin: "18.0"
+    - name: Node.js
+      versionMin: "20.0"
+    - name: Express
+      versionMin: "4.0"
