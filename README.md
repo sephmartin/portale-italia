@@ -108,6 +108,16 @@ Portale Italia espone un API Gateway REST unificato con contratto documentato **
 <tr><td><code>GET /api/v1/citizen/profile</code></td><td>Profilo cittadino</td></tr>
 </table>
 
+## 🏛 Collaborazione Istituzionale
+
+Questo PoC è pensato come punto di partenza per una conversazione — non come prodotto finito.
+
+Se lavori in un ente PA, in AgID, nel Dipartimento per la Trasformazione Digitale, o in una realtà che si occupa di interoperabilità dei dati pubblici in Italia, ci piacerebbe parlare di come portare questa architettura su dati reali.
+
+Il progetto è catalogato su [Developers Italia](https://developers.italia.it) tramite `publiccode.yml`.
+
+📬 **Contatti:** portale@sephmartin.com
+
 ## 🤝 Contribuire
 
 Contributi benvenuti. Il progetto è pensato come prototipo educativo e di advocacy — una dimostrazione di cosa i cittadini italiani meritano.
@@ -122,5 +132,5 @@ Per uso commerciale senza vincolo AGPL: contattami per una licenza enterprise.
 
 ---
 
-*Costruito per dimostrare cosa è possibile fare oggi.*
+*Costruito per dimostrare cosa è possibile fare oggi.*  
 *— Seph Martin*
