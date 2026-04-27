@@ -4,8 +4,6 @@
 
 > ⚠️ **PoC educativo e di advocacy.** I dati sono simulati. Non integra sistemi PA reali. Nessun dato personale viene raccolto o trasmesso.
 
-Portale Italia non è un mockup: è un prototipo funzionante costruito per dimostrare che il collo di bottiglia della burocrazia digitale italiana non è più tecnologico, ma di design.
-
 🔗 **Live Demo:** [portale-italia.online](https://portale-italia.online)
 
 ## 🚀 Cosa fa
@@ -18,11 +16,11 @@ Portale Italia non è un mockup: è un prototipo funzionante costruito per dimos
 
 ## 🌐 Benchmark Internazionali
 
-Il pattern architetturale di Portale-Italia segue la direzione già tracciata da tre modelli di riferimento globali. Questo PoC esplora la fattibilità di quel modello nel contesto italiano, dimostrando che il gap non è tecnologico — è di volontà e design.
+Il pattern architetturale segue modelli già adottati in altri paesi:
 
-- **🇪🇪 Estonia — Bürokratt:** Assistente AI unificato (dal 2020) che aggrega servizi pubblici eterogenei in un'interfaccia conversazionale accessibile via testo, voce o lingua dei segni. Pattern "generative UI over legacy systems." [→ e-estonia](https://e-estonia.com/estonia-and-automated-decision-making-challenges-for-public-administration/)
-- **🇬🇧 UK — AI Opportunities Action Plan 2025:** Governo britannico con partnership Anthropic per costruire un AI assistant per i servizi pubblici. "Humphrey" per i civil servant. Risparmio stimato: £45 miliardi/anno. [→ techUK](https://www.techuk.org/resource/uk-government-brings-further-ai-capability-into-public-services.html)
-- **🇸🇬 Singapore — Singpass:** 2.700 servizi di 800 enti accessibili da una singola identità digitale unificata. 41 milioni di transazioni al mese. Il modello più maturo di "single entry point" per i servizi PA. [→ tech.gov.sg](https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/)
+- **🇪🇪 Estonia — Bürokratt:** Assistente AI unificato (dal 2020) che aggrega servizi pubblici eterogenei in un'interfaccia conversazionale accessibile via testo, voce o lingua dei segni. [→ e-estonia](https://e-estonia.com/estonia-and-automated-decision-making-challenges-for-public-administration/)
+- **🇬🇧 UK — AI Opportunities Action Plan 2025:** Governo britannico con partnership Anthropic per costruire un AI assistant per i servizi pubblici. Risparmio stimato: £45 miliardi/anno. [→ techUK](https://www.techuk.org/resource/uk-government-brings-further-ai-capability-into-public-services.html)
+- **🇸🇬 Singapore — Singpass:** 2.700 servizi di 800 enti accessibili da una singola identità digitale unificata. 41 milioni di transazioni al mese. [→ tech.gov.sg](https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/)
 
 ## 📸 Screenshot
 
@@ -48,7 +46,7 @@ Il pattern architetturale di Portale-Italia segue la direzione già tracciata da
 
 ## 🎨 Design System
 
-Portale-Italia utilizza il token set ufficiale [`design-tokens-italia`](https://github.com/italia/design-tokens-italia) per garantire la piena conformità alle linee guida di design AgID. I colori del brand personalizzato (verde Italia) si sovrappongono ai token ufficiali per spaziatura, tipografia, raggi e ombre — offrendo credibilità istituzionale con un'identità distintiva.
+Portale-Italia utilizza il token set ufficiale [`design-tokens-italia`](https://github.com/italia/design-tokens-italia) per garantire la conformità alle linee guida di design AgID. I colori del brand personalizzato (verde Italia) si sovrappongono ai token ufficiali per spaziatura, tipografia, raggi e ombre.
 
 - **Token:** spaziatura (`--it-spacing-*`), dimensioni font (`--it-font-size-*`), ombre, raggi
 - **Personalizzati:** `--color-brand` (#1d7a3f), colori specifici per modulo, estensioni tema scuro
@@ -71,7 +69,7 @@ Portale-Italia utilizza il token set ufficiale [`design-tokens-italia`](https://
 └─────────────────────────────────────────┘
 ```
 
-Questo progetto **non** sostituisce i database statali. Agisce come un layer di orchestrazione sopra i sistemi legacy, formatta i dati e li espone tramite API unificata.
+Non sostituisce i database statali. Agisce come layer di orchestrazione sopra i sistemi legacy, formatta i dati e li espone tramite API unificata.
 
 ## ⚡ Setup
 
@@ -90,7 +88,7 @@ client/src/
 ├── hooks/          # use-toast, use-mobile
 └── lib/            # Utils, queryClient
 
-server/             # Backend Express (opzionale)
+server/             # Backend Express
 shared/             # Schema condiviso
 ```
 
@@ -110,9 +108,7 @@ Portale Italia espone un API Gateway REST unificato con contratto documentato **
 
 ## 🏛 Collaborazione Istituzionale
 
-Questo PoC è pensato come punto di partenza per una conversazione — non come prodotto finito.
-
-Se lavori in un ente PA, in AgID, nel Dipartimento per la Trasformazione Digitale, o in una realtà che si occupa di interoperabilità dei dati pubblici in Italia, ci piacerebbe parlare di come portare questa architettura su dati reali.
+Se lavori in un ente PA, in AgID, nel Dipartimento per la Trasformazione Digitale, o ti occupi di interoperabilità dei dati pubblici in Italia, scrivici per parlare di come portare questa architettura su dati reali.
 
 Il progetto è catalogato su [Developers Italia](https://developers.italia.it) tramite `publiccode.yml`.
 
@@ -120,9 +116,9 @@ Il progetto è catalogato su [Developers Italia](https://developers.italia.it) t
 
 ## 🤝 Contribuire
 
-Contributi benvenuti. Il progetto è pensato come prototipo educativo e di advocacy — una dimostrazione di cosa i cittadini italiani meritano.
+Contributi benvenuti. Apri una issue o una PR.
 
-Apri una issue o una PR. Per proposte di collaborazione istituzionale o commerciale: **portale@sephmartin.com**
+Per proposte di collaborazione istituzionale o commerciale: **portale@sephmartin.com**
 
 ## ⚖️ Licenza
 
@@ -132,5 +128,4 @@ Per uso commerciale senza vincolo AGPL: contattami per una licenza enterprise.
 
 ---
 
-*Costruito per dimostrare cosa è possibile fare oggi.*  
 *— Seph Martin*
