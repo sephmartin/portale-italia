@@ -4,7 +4,7 @@
 
 La pubblica amministrazione italiana è frammentata in silos digitali: INPS, Agenzia delle Entrate, PagoPA, ANPR, Fascicolo Sanitario, Portale Automobilista. Ognuno con la sua interfaccia, la sua logica, la sua password. Il cittadino è costretto a fare da middleware umano tra sistemi che non comunicano tra loro.
 
-Non è un problema tecnico — le informazioni esistono. È un problema di design: nessuno ha mai progettato l'esperienza complessiva del cittadino.
+Non è più un problema tecnico. Le informazioni esistono, le API esistono, l'identità digitale esiste. La sfida ora è di design: progettare l'esperienza complessiva del cittadino attraverso i vari enti — qualcosa che finora non è stato fatto in modo unificato.
 
 ## La soluzione
 
@@ -16,7 +16,7 @@ Il prototipo funzionale esiste. È una web app React con:
 
 - Sidebar unificata con accesso a tutti i moduli PA (INPS, Entrate, Sanità, PagoPA...)
 - Dashboard centralizzata con notifiche aggregate da ogni ente
-- Agente vocale per ogni modulo, basato su Web Speech API
+- Agente conversazionale sperimentale per ogni modulo, basato su Web Speech API
 - API Gateway documentato con 9+ endpoint unificati
 - Design system coerente con identità visiva italiana (tricolore, verde istituzionale)
 - Dark mode, responsive mobile con drawer navigation

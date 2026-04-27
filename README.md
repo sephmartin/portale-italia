@@ -9,7 +9,7 @@
 ## 🚀 Cosa fa
 
 - **Hub unificato:** INPS, Agenzia Entrate, PagoPA, ANPR, Fascicolo Sanitario, Automobilista — tutto in un posto
-- **Assistente AI integrato:** Contesto cross-piattaforma. Chiedi "come pago il bollo?" e ti guida nel modulo giusto
+- **Assistente AI integrato (sperimentale):** Un prototipo di guida conversazionale per aiutare il cittadino a trovare il servizio giusto (es. "dove pago il bollo?")
 - **Dark mode nativa**
 - **Design accessibile e responsive** — funziona su desktop e mobile
 - **API Gateway unificato** per sviluppatori e agenti AI
