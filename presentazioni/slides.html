@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CittadinoOS — Presentazione</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+  <style>
+    .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+    .reveal .green { color: #009246; font-weight: bold; }
+    .reveal .italian-green { color: #009246; }
+    .reveal .flag { font-size: 1.5em; margin-right: 0.5em; }
+    .reveal .columns { display: flex; gap: 2em; }
+    .reveal .column { flex: 1; }
+    .reveal pre { font-size: 0.6em; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <!-- Slide 1: Titolo -->
+    <section>
+      <h1>CittadinoOS</h1>
+      <h3 class="green">Portale Italia</h3>
+      <p>Un sistema operativo per il cittadino italiano</p>
+      <p><small>Project Brief v4 · Aprile 2026</small></p>
+      <p>
+        <a href="https://github.com/sephmartin/portale-italia" target="_blank">Repo</a> |
+        <a href="https://portale-italia.online" target="_blank">Demo</a>
+      </p>
+    </section>
+
+    <!-- Slide 2: Il problema -->
+    <section>
+      <h2>🔥 Il problema</h2>
+      <ul>
+        <li>PA frammentata in silos: INPS, Entrate, PagoPA, ANPR, Fascicolo Sanitario...</li>
+        <li>Ogni ente: interfaccia, login, logica separate</li>
+        <li>Il cittadino fa da <strong>middleware umano</strong></li>
+        <li><strong>Non è tecnico</strong> — le informazioni ci sono. È un problema di design.</li>
+      </ul>
+    </section>
+
+    <!-- Slide 3: La soluzione -->
+    <section>
+      <h2>💡 La soluzione</h2>
+      <ul>
+        <li>Unico punto di accesso a tutti i servizi PA</li>
+        <li>Autenticazione SPID/CIE unificata</li>
+        <li><strong>Layer intelligente</strong> sopra i sistemi esistenti</li>
+        <li>ispirato a Mint.com, ma per la burocrazia italiana</li>
+      </ul>
+    </section>
+
+    <!-- Slide 4: Il prototipo -->
+    <section>
+      <h2>🚀 Il prototipo</h2>
+      <p>Web app React con:</p>
+      <ul>
+        <li>Sidebar unificata per tutti i moduli PA</li>
+        <li>Dashboard centralizzata con notifiche aggregate</li>
+        <li>Agente vocale per modulo (Web Speech API)</li>
+        <li>API Gateway OpenAPI 3.0, 9+ endpoint</li>
+        <li>Design system <span class="green">Design System Italia</span> (token ufficiali), WCAG 2.1 AA</li>
+        <li>Dark mode, mobile responsive, drawer navigation</li>
+      </ul>
+      <p><em>Non è un mockup — è codice che gira.</em></p>
+    </section>
+
+    <!-- Slide 5: La visione -->
+    <section>
+      <h2>🎯 La visione</h2>
+      <p>Automazione fiscale e finanziaria via PSD2:</p>
+      <ul>
+        <li>Pre-compilazione automatica 730, Modello Unico, F24</li>
+        <li>Notifiche proattive per movimenti bancari</li>
+        <li>Zero dichiarazioni manuali</li>
+      </ul>
+      <p class="green">Obiettivo: rendere la PA invisibile.</p>
+    </section>
+
+    <!-- Slide 6: Benchmark internazionali -->
+    <section>
+      <h2>🌐 Benchmark internazionali</h2>
+      <div class="columns">
+        <div class="column">
+          <p><span class="flag">🇪🇪</span> <strong>Estonia — Bürokratt</strong><br>
+          Assistente AI unificato dal 2020, pattern "generative UI over legacy systems".</p>
+        </div>
+        <div class="column">
+          <p><span class="flag">🇬🇧</span> <strong>UK — AI Action Plan 2025</strong><br>
+          Partnership con Anthropic, AI assistant per PA. Risparmio stimato: £45 mld/anno.</p>
+        </div>
+        <div class="column">
+          <p><span class="flag">🇸🇬</span> <strong>Singapore — Singpass</strong><br>
+          2.700+ servizi, 41 milioni transazioni/mese, pre-compilazione automatica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Stack e compliance -->
+    <section>
+      <h2>🛠 Stack e compliance</h2>
+      <ul>
+        <li><code>design-react-kit</code> + <code>design-tokens-italia</code> (token ufficiali)</li>
+        <li>OpenAPI 3.0, allineato a <code>italia/api-oas-checker</code></li>
+        <li>Riferimento API PA Digitale 2026</li>
+        <li>Autenticazione: SPID/CIE + IT Wallet / EUDI Wallet</li>
+        <li>Accessibilità: WCAG 2.1 AA, GLI AGID</li>
+        <li>Approccio: AI-native, vibe coding</li>
+      </ul>
+    </section>
+
+    <!-- Slide 8: Domande aperte -->
+    <section>
+      <h2>❓ Le domande aperte</h2>
+      <h3>Interoperabilità</h3>
+      <p>API PA non aperte. Soluzione: middleware + PSD2 + autorizzazione utente. EUDI Wallet come layer identità.</p>
+      <h3>Privacy</h3>
+      <p>Agente on-device, zero storage server-side, SPID nativa.</p>
+      <h3>Accessibilità</h3>
+      <p>Voce come interfaccia primaria, zero gergo tecnico, unica login.</p>
+    </section>
+
+    <!-- Slide 9: Perché parliamone / Contatti -->
+    <section>
+      <h2>☕ Perché parliamone</h2>
+      <ul>
+        <li>Caffè Design: bridge verso agenzie PA</li>
+        <li>Approccio meno tecnico, più umano</li>
+        <li>Cerchiamo le persone giuste, non investitori</li>
+      </ul>
+      <p>
+        <strong>Fonti:</strong> innovazione.gov.it · freshfields.com/eidas<br>
+        <strong>Demo:</strong> <a href="https://portale-italia.online">portale-italia.online</a><br>
+        <strong>Repo:</strong> <a href="https://github.com/sephmartin/portale-italia">GitHub</a>
+      </p>
+    </section>
+
+    <!-- Slide 10: Grazie -->
+    <section>
+      <h1>Grazie</h1>
+      <h3 class="green">CittadinoOS — Portale Italia</h3>
+      <p>Questions?</p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    controls: true,
+    progress: true,
+    slideNumber: true,
+    highlight: { noHighlightOnInit: true }
+  });
+</script>
+</body>
+</html>
