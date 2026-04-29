@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CittadinoOS — Project Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --green: #009246; --red: #CE2B37; --white: #ffffff; --black: #1a1a1a; --gray: #666666; --bg: #ffffff; --border: #e5e5e5; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--black); line-height: 1.7; font-size: 17px; }
+    .topbar { background: var(--black); color: var(--white); padding: 14px 24px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; }
+    .flag { font-size: 24px; }
+    .topbar a { color: var(--white); text-decoration: none; opacity: 0.9; }
+    .topbar a:hover { opacity: 1; text-decoration: underline; }
+    .container { max-width: 840px; margin: 0 auto; padding: 64px 24px; }
+    header { text-align: center; margin-bottom: 72px; padding-bottom: 32px; border-bottom: 2px solid var(--green); }
+    h1 { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700; color: var(--black); margin-bottom: 12px; }
+    .subtitle { font-size: 20px; color: var(--gray); font-weight: 500; max-width: 600px; margin: 0 auto 24px; }
+    .last-updated { font-size: 14px; color: #888; font-style: italic; }
+    h2 { font-size: 28px; font-weight: 700; margin: 56px 0 20px; padding-left: 16px; border-left: 5px solid var(--green); color: var(--black); }
+    h3 { font-size: 21px; font-weight: 600; margin: 36px 0 14px; color: var(--black); }
+    p { margin-bottom: 18px; } strong { font-weight: 600; }
+    ul { margin: 16px 0; padding-left: 28px; } li { margin-bottom: 10px; }
+    a { color: var(--green); text-decoration: none; font-weight: 600; } a:hover { text-decoration: underline; }
+    .highlight { background: var(--green); color: white; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+    .benchmark-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 28px 0; }
+    .benchmark-card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; background: #fafafa; }
+    .benchmark-card h4 { margin-bottom: 10px; font-size: 18px; font-weight: 700; }
+    .benchmark-card p { font-size: 15px; color: var(--gray); margin-bottom: 12px; }
+    .benchmark-card a { font-size: 14px; font-weight: 600; }
+    .tricolor-stripe { height: 4px; background: linear-gradient(90deg, var(--green) 33%, #fff 33%, #fff 66%, var(--red) 66%); margin-top: 24px; border-radius: 2px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="flag">🇮🇹</span>
+    <span>CittadinoOS — Portale Italia</span>
+    <span style="margin-left: auto;">
+      <a href="https://github.com/sephmartin/portale-italia" target="_blank">GitHub</a>
+      <span style="margin: 0 8px;">·</span>
+      <a href="https://portale-italia.online" target="_blank">Demo</a>
+    </span>
+  </div>
+  <div class="container">
+    <header>
+      <h1>CittadinoOS</h1>
+      <p class="subtitle">Un sistema operativo per il cittadino italiano</p>
+      <p class="last-updated">Aggiornato: 28 April 2026</p>
+    </header>
+    <main>
+      <h2>Il problema</h2>
+      <p>La pubblica amministrazione italiana è frammentata in silos digitali: INPS, Agenzia delle Entrate, PagoPA, ANPR, Fascicolo Sanitario, Portale Automobilista. Ognuno con la sua interfaccia, la sua logica, la sua password. Il cittadino è costretto a fare da middleware umano tra sistemi che non comunicano tra loro.</p>
+      <p><strong>Non è un problema tecnico</strong> — le informazioni esistono. È un problema di design: nessuno ha mai progettato l'esperienza complessiva del cittadino.</p>
+
+      <h2>La soluzione</h2>
+      <p>Un unico punto di accesso a tutti i servizi della PA, con un'unica autenticazione SPID/CIE. Non un altro portale — <strong class="highlight">un layer intelligente</strong> che si mette sopra a quello che già esiste e lo rende utilizzabile. Pensa a come Mint.com ha unificato il banking, ma per tutta la burocrazia italiana.</p>
+
+      <h2>Il prototipo</h2>
+      <p>Il prototipo funzionale esiste già. È stato costruito con un approccio AI-native — "vibe coding" — dove l'intento guida l'esecuzione. Una web app React con:</p>
+      <ul>
+        <li>Sidebar unificata con accesso a tutti i moduli PA (INPS, Entrate, Sanità, PagoPA...)</li>
+        <li>Dashboard centralizzata con notifiche aggregate da ogni ente</li>
+        <li>Agente vocale per ogni modulo, basato su Web Speech API</li>
+        <li>API Gateway documentato con 9+ endpoint unificati</li>
+        <li><strong class="highlight">Design system conforme a Design System Italia</strong> con token ufficiali (verde istituzionale, tricolore), accessibilità AGID (WCAG 2.1 AA)</li>
+        <li>Dark mode, responsive mobile con drawer navigation</li>
+      </ul>
+      <p><em>Non è un mockup su Figma. È codice che gira.</em></p>
+
+      <h2>La visione</h2>
+      <p>Oltre al portale unificato, la visione include un layer di automazione fiscale e finanziaria. Collegando il conto bancario via PSD2 (open banking, già attivo in Italia), ogni movimento viene classificato automaticamente: spesa deducibile, reddito, IVA.</p>
+      <ul>
+        <li>Pre-compilazione automatica del 730, Modello Unico, F24 — senza input manuale</li>
+        <li>Notifiche proattive: "Hai ricevuto €1.200 da Mario Bianchi — vuoi registrarla come fattura?"</li>
+        <li>Zero dichiarazioni manuali: tutto il flusso fiscale diventa trasparente e automatico</li>
+      </ul>
+      <p><strong class="highlight">L'obiettivo non è sostituire la PA. È renderla invisibile</strong> — come dovrebbe essere.</p>
+
+      <h2>Benchmark internazionali</h2>
+      <p>Il pattern architetturale di CittadinoOS segue la direzione già tracciata da tre modelli di riferimento globali. Questo PoC esplora la fattibilità di quel modello nel contesto italiano, dimostrando che il gap non è tecnologico — è di volontà e design.</p>
+      <div class="benchmark-grid">
+        <div class="benchmark-card">
+          <h4>🇪🇪 Estonia — Bürokratt</h4>
+          <p>Assistente AI unificato (dal 2020) che aggrega servizi pubblici eterogenei in un'interfaccia conversazionale accessibile via testo, voce o lingua dei segni. Pattern "generative UI over legacy systems."</p>
+          <a href="https://e-estonia.com/estonia-and-automated-decision-making-challenges-for-public-administration/" target="_blank">→ e-estonia.com</a>
+        </div>
+        <div class="benchmark-card">
+          <h4>🇬🇧 Regno Unito — AI Action Plan 2025</h4>
+          <p>Il governo britannico ha lanciato nel gennaio 2025 un piano AI per la PA con partnership diretta con Anthropic. "Humphrey" per i civil servant. Un AI assistant per i servizi pubblici ai cittadini.</p>
+          <p><strong>Stimato:</strong> £45 miliardi/anno risparmio</p>
+          <a href="https://www.techuk.org/resource/uk-government-brings-further-ai-capability-into-public-services.html" target="_blank">→ techuk.org</a>
+        </div>
+        <div class="benchmark-card">
+          <h4>🇸🇬 Singapore — Singpass</h4>
+          <p>2.700+ servizi di 800 enti pubblici accessibili da una singola identità digitale unificata, con pre-compilazione automatica dei moduli tramite dati utente.</p>
+          <p><strong>41 milioni transazioni/mese</strong></p>
+          <a href="https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/" target="_blank">→ tech.gov.sg</a>
+        </div>
+      </div>
+
+      <h2>Le domande aperte</h2>
+      <h3>Interoperabilità</h3>
+      <p>Le API della PA italiana non sono aperte — come si risolve? L'approccio ipotizzato: middleware che aggrega i dati, PSD2 per la parte bancaria, accesso autorizzato dall'utente via SPID/CIE. Non serve hackerare nulla: basta che il cittadino autorizzi l'accesso ai propri dati.</p>
+      <p>C'è poi un pezzo che cambia il quadro: l'<strong>EU Digital Identity Wallet</strong> (eIDAS 2.0), che l'Italia sta già implementando come <strong>IT Wallet</strong> — attivo da dicembre 2024 sull'app IO, con oltre 2 milioni di wallet attivati nella prima settimana. CittadinoOS non è un'alternativa al wallet — è lo strato intelligente e interattivo che ci si appoggia sopra: il cittadino si autentica con l'EUDI Wallet, e CittadinoOS orchestra tutto il resto. Lo rende un acceleratore della visione europea, non un concorrente.</p>
+
+      <h3>Privacy e trust</h3>
+      <p>Dati fiscali e sanitari richiedono un livello di fiducia altissimo. La direzione: agente on-device, zero storage server-side, autenticazione SPID nativa. I dati restano sul dispositivo del cittadino — non su un server di terzi.</p>
+
+      <h3>Accessibilità</h3>
+      <p>Come funziona per chi non è tech-savvy? La voce come interfaccia primaria, zero gergo tecnico, un'unica app con un'unica login. Se sai parlare, sai usarla.</p>
+
+    </main>
+    <footer>
+      <p><strong>Demo:</strong> <a href="https://portale-italia.online" target="_blank">portale-italia.online</a> &nbsp;|&nbsp; <strong>Repo:</strong> <a href="https://github.com/sephmartin/portale-italia" target="_blank">GitHub</a></p>
+      <div class="tricolor-stripe"></div>
+      <p style="margin-top: 16px;">CittadinoOS — Project Brief · Aggiornato: 28 April 2026</p>
+    </footer>
+  </div>
+</body>
+</html>
