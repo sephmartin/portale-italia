@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useLocation } from "wouter";
 import { MODULES } from "../components/AppShell";
 
 const MODULE_COLOR: Record<string, string> = {
@@ -18,6 +19,7 @@ function NotifBadge({ priority }: { priority: string }) {
 }
 
 export default function DashboardPage() {
+  const [_, setLocation] = useLocation();
   const MOCK_N = { notifications: [ { id:1, title:"730 Precompilato disponibile", message:"Il tuo 730/2026 è pronto per la revisione. Scadenza 30 settembre.", date:"2026-04-10", source:"entrate", priority:"high", read:false }, { id:2, title:"Bonus Asilo Nido 2026 aperto", message:"Da oggi puoi richiedere il Bonus Asilo Nido. Importo max €3.000.", date:"2026-04-08", source:"inps", priority:"medium", read:false }, { id:3, title:"Bollo auto in scadenza", message:"Il tuo bollo auto scade il 30 aprile 2026. Paga ora con PagoPA.", date:"2026-04-05", source:"auto", priority:"high", read:false }, { id:4, title:"Certificato residenza disponibile", message:"Il certificato di residenza aggiornato è disponibile per il download.", date:"2026-04-01", source:"anpr", priority:"low", read:true }, { id:5, title:"Referto disponibile", message:"Il referto dell'esame del 22 marzo è ora disponibile nel Fascicolo Sanitario.", date:"2026-03-28", source:"salute", priority:"medium", read:true }, { id:6, title:"Pagamento IMU ricevuto", message:"Il pagamento IMU 2026 primo acconto di €412.00 è stato registrato.", date:"2026-03-15", source:"pagopa", priority:"low", read:true } ] };
   const MOCK_P = { citizen: { name:"Mario Rossi", cf:"RSSMRA80A01H501U" }, spid: { active:true }, cie: { active:true }, summary: { inps:{ contributions:18, activeDomande:1 }, entrate:{ dichiarazioneAnno:"2025", ultimoF24:"2026-02-16" }, pagopa:{ pendingPayments:2, totalPending:612.00 }, anpr:{ residence:"Roma (RM)", certificatiScaricati:3 }, salute:{ refertiNuovi:1, esenzioni:["E01"] }, auto:{ veicoli:1, bolloScadenza:"2026-04-30" } } };
   async function sf<T>(url: string, mock: T): Promise<T> { try { const r = await fetch(url); if (!r.ok) return mock; const t = await r.text(); if (!t||t.trim().startsWith("<")) return mock; return JSON.parse(t); } catch { return mock; } }
@@ -54,7 +56,7 @@ export default function DashboardPage() {
                 <div key={n.id}
                   className={`flex items-start gap-4 p-4 rounded-xl border transition-all card-hover ${n.read ? "opacity-60" : ""}`}
                   style={{ background: "var(--color-surface)", cursor: "pointer", borderColor: !n.read && n.priority === "high" ? MODULE_COLOR[moduleId] : "var(--color-border)" }}
-                  onClick={() => { const path = `/${moduleId || "dashboard"}`; window.location.hash = `#${path}`; }}
+                  onClick={() => { setLocation(`/${moduleId || "dashboard"}`); }}
                 >
                   {mod && (
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -63,11 +65,11 @@ export default function DashboardPage() {
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-start justify-between gap-2 mb-0.5">
-                      <p className="font-semibold text-base" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{n.title}</p>
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <p className="font-semibold text-lg" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>{n.title}</p>
                       <NotifBadge priority={n.priority} />
                     </div>
-                    <p className="text-sm" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{n.message || n.body}</p>
+                    <p className="text-base" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>{n.message || n.body}</p>
                     <div className="flex items-center gap-2 mt-1.5">
                       <span className="text-sm" style={{ color: "var(--color-text-faint)" }}>
                         {new Date(n.date).toLocaleDateString("it-IT", { day: "numeric", month: "short" })}
