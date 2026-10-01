@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-09-30T20:21:14.125Z",
+  "scope": "Fixture artificiali, protocollo MCP e contratto adapter; nessuna rete PA.",
+  "checks_passed": 10,
+  "checks": [
+    "schemi e annotazioni sola lettura pubblicati",
+    "ricerca conserva candidati distinti e fonte CC BY",
+    "paginazione conserva totale e next_offset",
+    "ufficio selezionato per codice esatto e metadati distinti dalla data del record",
+    "ente senza record RTD non viene dichiarato senza nomina",
+    "codice inesistente non restituisce un ente presunto",
+    "input fuori schema rifiutati prima di contattare IPA",
+    "indisponibilità upstream produce errore esplicito",
+    "schema upstream non valido non genera contatti",
+    "record di un altro ente rifiutato nel lookup esatto"
+  ]
+}

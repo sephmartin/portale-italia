@@ -1,0 +1,63 @@
+{
+  "verified_at": "2026-10-01T07:05:38.291Z",
+  "endpoint": "https://transmit-luck-information-mediterranean.trycloudflare.com/mcp",
+  "checks": [
+    {
+      "name": "Public HTTPS health",
+      "passed": true
+    },
+    {
+      "name": "Anonymous MCP denied with discovery challenge",
+      "passed": true
+    },
+    {
+      "name": "Reject arbitrary OAuth redirect",
+      "passed": true
+    },
+    {
+      "name": "ChatGPT stable callback registration",
+      "passed": true
+    },
+    {
+      "name": "Public OAuth PKCE flow, issuer and Secure cookie",
+      "passed": true
+    },
+    {
+      "name": "Public MCP transport and UI metadata",
+      "passed": true
+    },
+    {
+      "name": "Agent cannot confirm its own write",
+      "passed": true
+    },
+    {
+      "name": "Browser owns pending request",
+      "passed": true
+    },
+    {
+      "name": "Browser confirmation returns synthetic receipt",
+      "passed": true
+    },
+    {
+      "name": "Legacy MCP is returned as JSON for the tunnel",
+      "passed": true
+    },
+    {
+      "name": "Same display name has isolated public session",
+      "passed": true
+    },
+    {
+      "name": "Read-only token cannot prepare a write",
+      "passed": true
+    },
+    {
+      "name": "Revoked token denied over public HTTPS",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "ChatGPT account linking not performed",
+    "Temporary tunnel; local Mac required",
+    "Synthetic identities and transactions only"
+  ]
+}
