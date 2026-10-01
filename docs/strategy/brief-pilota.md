@@ -1,6 +1,6 @@
 # Portale Italia — proposta di pilota MCP
 
-**Versione 0.2 — 1 ottobre 2026**
+**Versione 0.3 — 1 ottobre 2026**
 
 ## Obiettivo
 
@@ -43,4 +43,8 @@ Per un e-service su PDND si verifica anche la fruizione del soggetto ammesso e l
 
 Una demo completa in collaudo con esito e ricevuta del sistema partner, codice del connettore riusabile e documentazione del flusso. L’estensione a un secondo client o ente sarà valutata dopo il primo risultato e con le autorizzazioni necessarie.
 
-Repository di partenza: [sephmartin/portale-italia](https://github.com/sephmartin/portale-italia). Il backend MCP e la demo sono inclusi nell’aggiornamento del repository proposto per revisione. Licenza del codice: AGPL-3.0-only. Nessun accordo o patrocinio istituzionale è attualmente dichiarato.
+## Contesto internazionale
+
+[Bürokratt in Estonia](https://www.ria.ee/en/state-information-system/artificial-intelligence) e [GOV.UK Chat](https://www.gov.uk/government/news/millions-to-get-faster-easier-access-to-government-support-with-new-ai-tool) offrono accesso conversazionale alle informazioni sui servizi pubblici. Negli Stati Uniti, l’[ordine su America.gov del 29 settembre 2026](https://www.whitehouse.gov/presidential-actions/2026/09/streamlining-access-to-government-services-through-america-gov/) indica anche integrazioni operative dove autorizzate e disponibili: è un mandato di sviluppo, non la prova che tutti i servizi siano già collegati. Queste esperienze motivano il pilota; non dimostrano l’adozione di MCP da parte degli enti citati.
+
+Codice disponibile: [backend MCP e demo](https://github.com/sephmartin/portale-italia/tree/codex/mcp-demo-chatgpt/mcp-server), nel ramo proposto per revisione con [PR #1](https://github.com/sephmartin/portale-italia/pull/1). Licenza: AGPL-3.0-only. Nessun accordo o patrocinio istituzionale è attualmente dichiarato.

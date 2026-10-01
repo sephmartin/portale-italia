@@ -6,6 +6,10 @@ Stato: 1 ottobre 2026. Valutazione, nessun deployment remoto effettuato.
 
 La VPS Oracle configurata non è raggiungibile via SSH. Il peer Tailscale è offline; ultima presenza il 24 settembre 2026, ore 01:50 Europe/Rome. Questo non distingue istanza spenta da Tailscale/SSH indisponibili. CPU, RAM, spazio, runtime e servizi attivi non sono stati verificati.
 
+La console Tailscale ha mostrato una chiave scaduta. L’estensione di 30 minuti, autorizzata dal proprietario, è stata applicata ma non ha riportato il peer online. Il successivo controllo SSH ha restituito ancora un timeout: non è stato possibile riautenticare Linux. Per proseguire serve un accesso indipendente da Tailscale, per esempio la console Oracle, e la verifica dello stato dell’istanza e del servizio. Nessuna scadenza è stata disabilitata e nessun gateway è stato riavviato.
+
+Per scelta del proprietario la demo rimane temporaneamente sul Mac. La migrazione è rinviata finché l’accesso remoto non sarà ripristinato e l’ambiente verificato.
+
 ## Architettura proposta
 
 ChatGPT -> HTTPS pubblico stabile -> reverse proxy o Cloudflare Tunnel nominato -> server Node.js su loopback della VPS -> tool MCP e servizio sintetico.
