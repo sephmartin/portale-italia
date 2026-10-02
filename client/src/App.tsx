@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { Switch, Route, Router } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import AppShell from "./components/AppShell";
+import PublicHomePage from "./pages/PublicHomePage";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import INPSPage from "./pages/INPSPage";
@@ -40,21 +40,26 @@ export default function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Router hook={useHashLocation}>
-        <AppShell>
-          <Switch>
-            <Route path="/" component={HomePage} />
-            <Route path="/dashboard" component={DashboardPage} />
-            <Route path="/inps" component={INPSPage} />
-            <Route path="/entrate" component={EntratePage} />
-            <Route path="/pagopa" component={PagoPAPage} />
-            <Route path="/anpr" component={ANPRPage} />
-            <Route path="/salute" component={SalutePage} />
-            <Route path="/auto" component={AutoPage} />
-            <Route path="/api" component={APIGatewayPage} />
-            <Route component={NotFound} />
-          </Switch>
-        </AppShell>
+      <Router>
+        <Switch>
+          <Route path="/" component={PublicHomePage} />
+          <Route>
+            <AppShell>
+              <Switch>
+                <Route path="/hub" component={HomePage} />
+                <Route path="/dashboard" component={DashboardPage} />
+                <Route path="/inps" component={INPSPage} />
+                <Route path="/entrate" component={EntratePage} />
+                <Route path="/pagopa" component={PagoPAPage} />
+                <Route path="/anpr" component={ANPRPage} />
+                <Route path="/salute" component={SalutePage} />
+                <Route path="/auto" component={AutoPage} />
+                <Route path="/api" component={APIGatewayPage} />
+                <Route component={NotFound} />
+              </Switch>
+            </AppShell>
+          </Route>
+        </Switch>
       </Router>
       <Toaster />
     </QueryClientProvider>

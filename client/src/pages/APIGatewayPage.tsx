@@ -60,7 +60,7 @@ const ENDPOINTS = [
   {
     method: "WebSocket", path: "/ws/v1/notify/{cf}", module: "Tutti",
     desc: "Stream real-time delle notifiche aggregate da tutti i moduli PA. Emette eventi tipizzati per modulo con priorità. Richiede Bearer token.",
-    body: `// Connessione\nconst ws = new WebSocket('wss://api.cittadino.gov.it/ws/v1/notify/RSSMRA80A01H501U');\nws.on('message', data => console.log(JSON.parse(data)));`,
+    body: `// Endpoint dimostrativo\nconst ws = new WebSocket('wss://api.example.invalid/ws/v1/notify/{id}');\nws.on('message', data => console.log(JSON.parse(data)));`,
     response: `{ "type": "notification", "module": "entrate", "priority": "high", "title": "730 disponibile", "timestamp": 1744542000 }`,
     auth: true,
   },
@@ -122,32 +122,33 @@ export default function APIGatewayPage() {
   return (
     <div className="space-y-7 fade-in">
       <div>
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-3" style={{ borderColor: "var(--color-brand)", background: "var(--color-brand-light)" }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand)" strokeWidth="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <span className="text-xs font-semibold" style={{ color: "var(--color-brand)", fontFamily: "var(--font-body)" }}>REST API v1 · WebSocket · Open</span>
-        </div>
-        <h1 className="font-extrabold" style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", color: "var(--color-text)" }}>API Gateway Unificato</h1>
+        <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--color-brand)", fontFamily: "var(--font-body)" }}>Concept tecnico per agenti civici</p>
+        <h1 className="font-extrabold" style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", color: "var(--color-text)" }}>AI Gateway</h1>
         <p className="mt-2 text-sm max-w-2xl" style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-body)" }}>
-          Un unico gateway per accedere a tutti i servizi PA italiani. Integra INPS, Agenzia Entrate, PagoPA, ANPR e molto altro in qualsiasi app, agente AI o workflow.
+          Un'ipotesi di collegamento tra assistenti digitali e servizi pubblici tramite API autorizzate. Endpoint, dati e flussi mostrati qui sono esempi: non ci sono integrazioni attive con la PA.
         </p>
       </div>
+
+      <aside role="note" className="border-l-2 pl-4 py-1 text-sm" style={{ borderColor: "var(--color-brand)", color: "var(--color-text-muted)" }}>
+        Il prototipo non raccoglie credenziali SPID o CIE e non invia richieste agli enti. Un servizio reale richiederebbe accordi, deleghe e accessi autorizzati.
+      </aside>
 
       {/* Base URL */}
       <div className="flex flex-wrap items-center gap-6 p-4 rounded-xl border" style={{ background: "var(--color-surface)", borderColor: "var(--color-border)" }}>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Base URL</p>
-          <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-brand)", fontSize: "var(--text-sm)" }}>https://api.cittadino.gov.it/</code>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Base URL dimostrativa</p>
+          <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-brand)", fontSize: "var(--text-sm)" }}>https://api.example.invalid</code>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Auth</p>
-          <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-text-muted)", fontSize: "var(--text-sm)" }}>Bearer &lt;SPID_token&gt;</code>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Accesso (concept)</p>
+          <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-text-muted)", fontSize: "var(--text-sm)" }}>Deleghe, mai password</code>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Rate Limit</p>
-          <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-text-muted)", fontSize: "var(--text-sm)" }}>1000 req/min</code>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Limiti di chiamata</p>
+          <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-text-muted)", fontSize: "var(--text-sm)" }}>Da definire con gli enti</code>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Agent Endpoint</p>
+          <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "var(--color-text-faint)" }}>Endpoint agente (esempio)</p>
           <code style={{ fontFamily: "var(--font-mono)", color: "var(--color-entrate)", fontSize: "var(--text-sm)" }}>POST /api/v1/agent/query</code>
         </div>
       </div>

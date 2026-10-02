@@ -148,15 +148,15 @@ export default function HomePage() {
             </svg>
             <span className="text-xs font-semibold uppercase tracking-wide opacity-50" style={{ fontFamily: "var(--font-body)" }}>Developer & AI Agents</span>
           </div>
-          <h2 className="font-extrabold" style={{ fontFamily: "var(--font-display)" }}>API Gateway Unificato</h2>
+          <h2 className="font-extrabold" style={{ fontFamily: "var(--font-display)" }}>AI Gateway</h2>
           <p className="text-sm mt-1 opacity-60" style={{ fontFamily: "var(--font-body)" }}>
-            Tutti i servizi PA in un unico endpoint. Integra in n8n, Make, o qualsiasi agente AI.
+            Un concept per collegare agenti digitali ai servizi pubblici. Le integrazioni mostrate sono simulate, nessun collegamento con la PA è attivo.
           </p>
         </div>
         <Link href="/api"
           className="px-5 py-2.5 rounded-xl text-sm font-bold flex-shrink-0 hover:opacity-90 transition-opacity"
           style={{ background: "var(--color-brand)", color: "white", fontFamily: "var(--font-body)" }}>
-          Vai all'API Gateway →
+          Esplora AI Gateway →
         </Link>
       </div>
     </div>

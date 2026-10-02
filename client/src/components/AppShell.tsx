@@ -91,7 +91,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
   const { dark, toggle } = useTheme();
 
   const topNav = [
-    { href: "/", label: "Hub", Icon: GridIcon },
+    { href: "/hub", label: "Hub", Icon: GridIcon },
     { href: "/dashboard", label: "Dashboard", Icon: ({ size = 18 }) => (
       <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>
@@ -113,7 +113,7 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
     >
       {/* Logo area */}
       <div className="h-16 flex items-center px-4 border-b flex-shrink-0" style={{ borderColor: "var(--color-border)" }}>
-        <Link href="/" className="flex-1 min-w-0" aria-label="Home">
+        <Link href="/" className="flex-1 min-w-0" aria-label="Home pubblica Portale Italia" title="Torna alla home pubblica">
           <Logo collapsed={collapsed} />
         </Link>
         {!collapsed && (
@@ -180,17 +180,17 @@ function Sidebar({ collapsed, onToggle, isMobile, mobileOpen }: { collapsed: boo
         {!collapsed && <div className="mx-1 my-2 h-px" style={{ background: "var(--color-divider)" }} />}
         {collapsed && <div className="my-2 mx-2 h-px" style={{ background: "var(--color-divider)" }} />}
 
-        <Link href="/api" aria-label="API Gateway"
+        <Link href="/api" aria-label="AI Gateway"
           className={`relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${location === "/api" ? "nav-active" : ""}`}
           style={{
             background: location === "/api" ? "var(--color-brand-light)" : "transparent",
             color: location === "/api" ? "var(--color-brand)" : "var(--color-text-muted)",
             fontFamily: "var(--font-body)",
           }}
-          title={collapsed ? "API Gateway" : undefined}
+          title={collapsed ? "AI Gateway" : undefined}
         >
           <CodeIcon size={16} aria-hidden="true" />
-          {!collapsed && <span>API Gateway</span>}
+          {!collapsed && <span>AI Gateway</span>}
         </Link>
       </nav>
 
@@ -258,7 +258,7 @@ function Topbar({ sidebarWidth, onMobileMenu, isMobile }: { sidebarWidth: number
         )}
         {!module && (
           <span className="text-sm font-semibold" style={{ fontFamily: "var(--font-display)", color: "var(--color-text)" }}>
-            {location === "/" ? "Hub servizi" : location === "/dashboard" ? "Dashboard" : location === "/api" ? "API Gateway" : "CittadinoOS"}
+            {location === "/hub" ? "Hub servizi" : location === "/dashboard" ? "Dashboard" : location === "/api" ? "AI Gateway" : "CittadinoOS"}
           </span>
         )}
       </div>
