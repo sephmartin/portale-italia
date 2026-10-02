@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Evaluation prompts for the frozen synthetic upstream in scripts/verify-contract.mjs.
+     Not current IPA data. Not an LLM evaluation already executed.
+     Each question is independent and requires entity discovery followed by office lookup. -->
+<evaluation>
+  <qa_pair>
+    <question>Nel campione artificiale, cerca l'amministrazione chiamata esattamente Comune Alfa, escludendo quella con un qualificatore aggiuntivo. Individua il suo ufficio digitale e restituisci soltanto il codice dell'unità organizzativa.</question>
+    <answer>FIXTURE</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, trova il referente digitale del Comune Alfa, evitando l'omonimo Comune Alfa Piccolo. Rispondi soltanto con nome e cognome pubblicati per il referente.</question>
+    <answer>Nome Fittizio</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, cerca i comuni con denominazione che contiene Comune Alfa, poi controlla l'ufficio di ciascuno. Qual è il nome completo dell'ente che esiste nel registro ma non ha record di ufficio digitale pubblicati? Rispondi con la sola denominazione.</question>
+    <answer>Comune Alfa Piccolo</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, cerca i comuni Alfa una pagina alla volta con limit 1. Controlla gli uffici di ogni candidato prima di decidere: quanti enti del campione hanno almeno un record di ufficio digitale? Rispondi soltanto con il numero.</question>
+    <answer>1</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, trova il comune Alfa che pubblica un referente digitale e consulta il suo ufficio. Quando è stato aggiornato quel singolo record, distinguendo questa data dal refresh del dataset? Rispondi soltanto in formato YYYY-MM-DD.</question>
+    <answer>2024-03-15</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, cerca i comuni Alfa e individua attraverso i loro uffici quello con un referente pubblicato. Qual è la data di aggiornamento del suo record nel registro degli enti, distinta da quella dell'ufficio? Rispondi soltanto in formato YYYY-MM-DD.</question>
+    <answer>2025-12-11</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, individua il comune Alfa che ha un ufficio digitale pubblicato. La data del suo record RTD coincide con il refresh del dataset uffici? Rispondi soltanto True o False.</question>
+    <answer>False</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, cerca i comuni Alfa e consulta gli uffici per trovare il referente pubblicato. Restituisci soltanto la sua email, usando il campo del responsabile e non la casella generale dell'ente.</question>
+    <answer>rtd@example.invalid</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, identifica i due enti Alfa e consulta il dataset uffici per ciascuno. Che licenza dei dati dichiarano entrambe le fonti? Rispondi con il solo identificatore della licenza, distinto dalla licenza del codice.</question>
+    <answer>CC-BY-4.0</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Nel campione artificiale, cerca i comuni Alfa e confronta gli uffici pubblicati di tutti i candidati. Quanti record di ufficio digitale risultano in totale per quegli enti? Non inferire il numero di nomine dal silenzio del dataset. Rispondi soltanto con il numero.</question>
+    <answer>1</answer>
+  </qa_pair>
+</evaluation>

@@ -1,0 +1,102 @@
+{
+  "verified_at": "2026-10-01T07:00:08.604Z",
+  "checks": [
+    {
+      "name": "MCP requires valid bearer token",
+      "passed": true
+    },
+    {
+      "name": "OAuth metadata advertises PKCE S256",
+      "passed": true
+    },
+    {
+      "name": "Alice and Bob complete authorization code + PKCE",
+      "passed": true
+    },
+    {
+      "name": "Callback state is single use",
+      "passed": true
+    },
+    {
+      "name": "Reject wrong CSRF",
+      "passed": true
+    },
+    {
+      "name": "Reject cross-origin browser mutation",
+      "passed": true
+    },
+    {
+      "name": "Interface calls real MCP transport",
+      "passed": true
+    },
+    {
+      "name": "Preparing does not create a booking",
+      "passed": true
+    },
+    {
+      "name": "Agent cannot call human-confirmation endpoint as a tool",
+      "passed": true
+    },
+    {
+      "name": "Another user cannot confirm pending request",
+      "passed": true
+    },
+    {
+      "name": "Human confirmation creates a receipt",
+      "passed": true
+    },
+    {
+      "name": "Duplicate confirmation returns same receipt",
+      "passed": true
+    },
+    {
+      "name": "Receipts isolated by user",
+      "passed": true
+    },
+    {
+      "name": "Cannot double book occupied slot",
+      "passed": true
+    },
+    {
+      "name": "Another user cannot cancel receipt",
+      "passed": true
+    },
+    {
+      "name": "Cancellation releases the slot",
+      "passed": true
+    },
+    {
+      "name": "Audit is scoped, synthetic and excludes tokens",
+      "passed": true
+    },
+    {
+      "name": "Revocation invalidates the session",
+      "passed": true
+    },
+    {
+      "name": "OAuth token endpoint validates PKCE and audience",
+      "passed": true
+    },
+    {
+      "name": "Authorization code cannot be redeemed twice",
+      "passed": true
+    },
+    {
+      "name": "MCP advertises embedded UI metadata",
+      "passed": true
+    },
+    {
+      "name": "MCP delivers the widget HTML resource",
+      "passed": true
+    },
+    {
+      "name": "Unconfirmed write rejected over direct MCP",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "ChatGPT host not connected",
+    "No real PA transactions",
+    "No production identity provider"
+  ]
+}

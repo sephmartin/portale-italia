@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-01",
+  "method": "manual browser interaction in actual ChatGPT",
+  "observed": ["custom app created and OAuth linked", "MCP Apps widget rendered with server availability", "booking preparation returned confirmation link without committing", "explicit confirmation in demo page created synthetic receipt", "ChatGPT read same receipt via MCP and rendered it", "only test booking cancelled and slot released"],
+  "limits": ["synthetic identity and bookings", "confirmation and cancellation in separate demo page", "no appointment rescheduling tool", "temporary HTTPS tunnel from local Mac", "not a public app catalog publication", "not a PA integration or security certification"]
+}

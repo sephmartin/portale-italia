@@ -1,0 +1,25 @@
+{
+  "verified_at": "2026-09-30T20:15:29.478Z",
+  "scope": "MCP SDK clients + API pubblica IPA; nessun account ChatGPT, dato personale del cittadino o azione PA.",
+  "checks_passed": 10,
+  "checks": [
+    "stdio: discovery dei due tool",
+    "stdio: ricerca live e disambiguazione di Bologna",
+    "stdio: referente live da codice IPA esatto e date distinte",
+    "HTTP: discovery dei due tool",
+    "HTTP: chiamata live a IPA",
+    "HTTP: rifiuta Host esterno",
+    "HTTP: rifiuta Origin esterna",
+    "HTTP: limita il percorso a /mcp",
+    "HTTP: rifiuta body oltre 64 KiB",
+    "HTTP: discovery con protocollo MCP 2025-06-18"
+  ],
+  "sample": {
+    "ipa_code": "c_a944",
+    "entity": "Comune di Bologna",
+    "search_matches": 2,
+    "office_records": 1,
+    "office_record_updated_at": "2024-03-15",
+    "dataset_refreshed_at": "2026-09-30T03:14:24.613231"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "portale-italia-mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP per cercare enti e uffici di transizione digitale nei dati pubblici ufficiali IPA.",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "verify:contract": "node scripts/verify-contract.mjs",
+    "verify:live": "node scripts/verify-live.mjs",
+    "demo": "npm run build && node demo/server.mjs",
+    "verify:demo": "node demo/verify.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.2.0",
+    "@modelcontextprotocol/node": "2.1.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.2.0",
+    "@types/node": "^22.0.0",
+    "typescript": "7.0.2"
+  }
+}

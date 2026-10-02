@@ -2,9 +2,23 @@
 
 > **Il layer di orchestrazione che unifica i servizi della PA italiana in un'unica interfaccia conversazionale.**
 
-> ⚠️ **PoC educativo e di advocacy.** I dati sono simulati. Non integra sistemi PA reali. Nessun dato personale viene raccolto o trasmesso.
+> ⚠️ **PoC educativo e di advocacy.** Le pratiche e i servizi personali dell’interfaccia sono simulati; non sono collegati ai sistemi operativi della PA. Il backend MCP separato consulta soltanto dati istituzionali pubblici IPA. Nessun dato personale del cittadino è richiesto per questi lookup.
 
 🔗 **Live Demo:** [portale-italia.online](https://portale-italia.online)
+
+## Backend MCP
+
+Il pacchetto autonomo [`mcp-server/`](mcp-server/README.md) espone due tool reali sull’Indice PA: ricerca di enti e consultazione dei loro uffici della transizione digitale. Supporta stdio e Streamable HTTP locale, con fonti, licenze e date distinte per dataset e singolo record. Non è ancora collegato all’interfaccia della live demo e non compie operazioni amministrative.
+
+- [Istruzioni e perimetro del backend](mcp-server/README.md)
+- [Mappa degli interlocutori e schema del sistema](docs/strategy/piano-agentico-pa.md)
+- [Ricerca sulle API e MCP pubblici già esistenti](docs/research/agentic-pa-apis.md)
+- [Proposta di pilota per i partner](docs/strategy/brief-pilota.md)
+- [Piano hosting VPS Linux](docs/strategy/hosting-vps.md)
+
+## Demo agentica verificata in ChatGPT
+
+Il 1 ottobre 2026 la [demo MCP separata](mcp-server/demo/README.md) è stata collegata a ChatGPT con OAuth: componente grafico incorporato, disponibilità, preparazione, conferma nella pagina demo e lettura della ricevuta. Le prenotazioni e le identità sono sintetiche; nessun servizio PA transazionale è collegato. Annullamento disponibile nella pagina; modifica appuntamento ancora da implementare. La connessione corrente usa un tunnel temporaneo dal Mac: hosting stabile non ancora attivo. Non è una pubblicazione nel catalogo pubblico delle app.
 
 ## 🚀 Cosa fa
 

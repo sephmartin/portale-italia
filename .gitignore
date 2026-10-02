@@ -8,3 +8,5 @@ dist/
 record_demo*.py
 capture_screenshots.py
 deploy_*.py
+.local-outreach/
+tmp/pdfs/
